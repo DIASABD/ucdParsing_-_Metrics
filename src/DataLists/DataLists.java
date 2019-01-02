@@ -7,10 +7,7 @@ import file_reading.ReadFile;
 import javax.swing.*;
 
 /**********************************************************************************
- *  Ce programme  permet de faire le parsing d'un fichier ucd entrez en parametre.*
- * Il a été fait par Diasso Abdramane  matricule 20057513 et Willy Foadjo Mlle    *
- * 20059876 .  Il s'agit du dévoir 2 du cours IFT 3913 Session d'Automne 2018.    *                                                                   *
- *                                                                                *
+ *  Cette classe est un constructeur qui initialise les lists pour l'interface    *
  * ********************************************************************************/
 
 
@@ -18,7 +15,6 @@ public class DataLists {
 
 
     // Déclaration des listes
-
     JList sous_class_list;
     JList agg_ass_list;
     JList detail_list;
@@ -27,10 +23,6 @@ public class DataLists {
     JList metrics_list;
     JList class_list ;
 
-    /**
-     *
-     * @return
-     */
 
     public JList getClass_list() {
         return class_list;
@@ -41,7 +33,6 @@ public class DataLists {
     }
 
     DefaultListModel <String>classListModel;
-
     DefaultListModel<Attributs> attribListModel;
     DefaultListModel<Operations> methodListModel;;
     DefaultListModel<SousClasses>sous_classListModel;
@@ -49,30 +40,16 @@ public class DataLists {
     DefaultListModel<Agregations>detailListModel;
     DefaultListModel<Details> metricsModel;
 
-
-
     public JList getAttribut_list() {
         return attribut_list;
     }
-
-
     public JList getMetrics_list() {
         return metrics_list;
     }
-
     public DefaultListModel getMetricsModel() {
         return metricsModel;
     }
-
-    public void setMetricsModel(DefaultListModel metricsModel,String string) {
-        metricsModel.addElement(string);
-    }
-
-    /**
-     * Constructeur de la classe qui initialise toutes les listes
-     */
     public DataLists() {
-
 
         this.attribListModel = new DefaultListModel();
         this.methodListModel = new DefaultListModel();
@@ -82,7 +59,6 @@ public class DataLists {
         this.metricsModel = new DefaultListModel();
         this.classListModel = new DefaultListModel();
         this.class_list = new JList(classListModel) ;
-
         this.sous_class_list = new JList(sous_classListModel);
         this.agg_ass_list = new JList(ass_ag_ListModel);
         this.methodes_list = new JList(methodListModel);
@@ -91,9 +67,6 @@ public class DataLists {
         this.metrics_list= new JList(metricsModel);
 
     }
-
-
-
     public JList getSous_class_list() {
         return sous_class_list;
     }
@@ -109,7 +82,6 @@ public class DataLists {
     public JList getMethodes_list() {
         return methodes_list;
     }
-
 
     public DefaultListModel getAttribListModel() {
         return attribListModel;

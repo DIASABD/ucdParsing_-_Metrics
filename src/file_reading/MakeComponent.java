@@ -5,14 +5,9 @@ import javax.swing.*;
 import java.awt.*;
 
 
-/**********************************************************************************
- *  Ce programme  permet de faire le parsing d'un fichier ucd entrez en parametre.*
- * Il a été fait par Diasso Abdramane  matricule 20057513 et Willy Foadjo Mlle    *
- * 20059876 .  Il s'agit du dévoir  du cours IFT 3913 Session d'Automne 2018.    *                                                                   *
- *                                                                                *
- * ********************************************************************************/
-
-
+/************************************************************************************
+ *  Cette classe est un constructeur qui initialise les composants pour l'interface *
+ * **********************************************************************************/
 public class MakeComponent {
 
 
@@ -37,7 +32,6 @@ public class MakeComponent {
     JScrollPane metricScrole;
     GridBagConstraints gbc ;
 
-
     /**
      * Constructeur de la classe qui initialise certains composants
      */
@@ -48,7 +42,7 @@ public class MakeComponent {
         gbc = new GridBagConstraints();
         topPanel= new JPanel();
         principal_panel.setEnabled(false);
-       // principal_panel.setBackground(new Color(15,62,125));
+        // principal_panel.setBackground(new Color(15,62,125));
 
     }
 
@@ -80,7 +74,7 @@ public class MakeComponent {
      * @return
      */
 
- public JScrollPane component(JList list, int units, String compName){
+    public JScrollPane component(JList list, int units, String compName){
 
         JScrollPane jScrollPane;
 
@@ -110,8 +104,8 @@ public class MakeComponent {
         // Donne un nom en bordure au composant
         list.setBorder(BorderFactory.createTitledBorder(compName));
         jScrollPane= new JScrollPane(list);
-       // jScrollPane.setBackground(new Color(15,62,125));
-       // list.setBackground(new Color(50,80,200));
+        // jScrollPane.setBackground(new Color(15,62,125));
+        // list.setBackground(new Color(50,80,200));
         return  jScrollPane;
     }
 

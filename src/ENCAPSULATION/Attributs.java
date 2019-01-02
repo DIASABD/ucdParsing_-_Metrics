@@ -1,5 +1,9 @@
 package ENCAPSULATION;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction des Attributs    d'une classe *
+ * ********************************************************************/
+
 import file_reading.SetComponent;
 
 import javax.swing.*;

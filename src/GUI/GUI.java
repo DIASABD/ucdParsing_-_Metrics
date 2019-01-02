@@ -13,22 +13,18 @@ import file_reading.SetComponent;
 import javax.swing.*;
 import java.io.File;
 
-/**********************************************************************************
- *  Ce programme  permet de faire le parsing d'un fichier ucd entrez en parametre.*
- * Il a été fait par Diasso Abdramane  matricule 20057513 et Willy Foadjo Mlle    *
- * 20059876 .  Il s'agit du dévoir 2 du cours IFT 3913 Session d'Automne 2018.    *                                                                   *
- *                                                                                *
- * ********************************************************************************/
+/************************************************************************************
+ *  Ce programme fait le parsing d'un fichier und et calculs les metriques du MODEL *
+ *  Ceci est un exemple qui utilise un interface Swing                              *
+ *  Cette classe contient la methode princicipal main                               *
+ * **********************************************************************************/
 
 
 public class GUI  {
 
 
     SetComponent setComponent ;
-
     public GUI (){
-
-
         // Déclaration du JFrame et définition des paramètre
         JFrame frame = new JFrame();
         frame.setSize(800,600);

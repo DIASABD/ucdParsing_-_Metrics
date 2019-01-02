@@ -2,13 +2,10 @@ package ENCAPSULATION;
 
 import file_reading.SetComponent;
 
+/*******************************************************************
+ *  Cette classe definit une obstraction les Details  d'une classe *
+ * *****************************************************************/
 
-/**********************************************************************************
- *  Ce programme  permet de faire le parsing d'un fichier ucd entrez en parametre.*
- * Il a été fait par Diasso Abdramane  matricule 20057513 et Willy Foadjo Mlle    *
- * 20059876 .  Il s'agit du dévoir 2 du cours IFT 3913 Session d'Automne 2018.    *                                                                   *
- *                                                                                *
- * ********************************************************************************/
 
 
 import java.io.File;

@@ -1,5 +1,9 @@
 package ENCAPSULATION;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction des Agregations d'une classe *
+ * ********************************************************************/
+
 
 import file_reading.SetComponent;
 

@@ -1,5 +1,10 @@
 package METRICS;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction la metrique NOC  d'une classe *
+ * ********************************************************************/
+
+
 import ENCAPSULATION.Classes;
 import ENCAPSULATION.MODEL;
 import file_reading.*;
@@ -18,8 +23,6 @@ public class NOC  implements    CalMetrics{
         this.classes = classes;
         this.metricName= "NOC";;
     }
-
-
 
     public int getNocValue() {
         return nocValue;

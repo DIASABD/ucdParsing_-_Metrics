@@ -1,5 +1,10 @@
 package METRICS;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction la metrique NOD   d'une classe *
+ * ********************************************************************/
+
+
 import ENCAPSULATION.Classes;
 import ENCAPSULATION.MODEL;
 import file_reading.*;
@@ -19,8 +24,6 @@ public class NOD implements CalMetrics {
         this.classes = classes;
         this.metricName= "NOD";;
     }
-
-
     public int getNodCalc() {
         return nodCalc;
     }
@@ -67,15 +70,8 @@ public class NOD implements CalMetrics {
                 System.out.println(x);
                 i--;
             }
-
-
-
-
         }
         catch(Exception d){};
-
-
-
         return x;
     }
 }

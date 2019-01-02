@@ -10,17 +10,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-
-
-/**********************************************************************************
- *  Ce programme  permet de faire le parsing d'un fichier ucd entrez en parametre.*
- * Il a été fait par Diasso Abdramane  matricule 20057513 et Willy Foadjo Mlle    *
- * 20059876 .  Il s'agit du dévoir 1 du cours IFT 3913 Session d'Automne 2018.    *                                                                   *
- *                                                                                *
- * ********************************************************************************/
+/****************************************************************************************
+ *  Cette classe fait la lecture des fichiers et fait le setting des listes des panels. *
+ * **************************************************************************************/
 
 
 public class ReadFile {
@@ -93,7 +86,6 @@ public class ReadFile {
      * @param elem
      * @return
      */
-
     private boolean notInList(DefaultListModel dlm, String elem) {
 
         int i = 0;
@@ -175,8 +167,6 @@ public class ReadFile {
                         String tab1[] = tab[i].split(",");
 
                         dlm.addElement(tab1[0]);
-
-
                     }
                     break;
                 }
@@ -334,11 +324,8 @@ public class ReadFile {
 
                             }
                             break;
-
-
                     }
                     if (regex2Found) break;
-
                 }
             }
 
@@ -373,27 +360,27 @@ public class ReadFile {
                     switch (regex) {
 
                         case "RELATION":
-                                while (((sCurrentLine = br.readLine()) != null) && !sCurrentLine.equals(end)) {
+                            while (((sCurrentLine = br.readLine()) != null) && !sCurrentLine.equals(end)) {
 
-                                    dlm.addElement(sCurrentLine);
-                                }
-                                dlm.addElement(";");
+                                dlm.addElement(sCurrentLine);
+                            }
+                            dlm.addElement(";");
                             ;
                             break;
                         case "AGGREGATION":
-                                while (((sCurrentLine = br.readLine()) != null) && !sCurrentLine.equals(end)) {
+                            while (((sCurrentLine = br.readLine()) != null) && !sCurrentLine.equals(end)) {
 
-                                    dlm.addElement(sCurrentLine);
-                                }
-                                dlm.addElement(";");
-                                break;
+                                dlm.addElement(sCurrentLine);
+                            }
+                            dlm.addElement(";");
+                            break;
                     }
 
                 }
             }
 
         }
-         catch (Exception e) {
+        catch (Exception e) {
 
         }
         return dlm;

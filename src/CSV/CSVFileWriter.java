@@ -14,24 +14,15 @@ import java.util.List;
 
 
 /**********************************************************************************
- *  Ce programme  permet de faire le parsing d'un fichier ucd entrez en parametre.*
- * Il a été fait par Diasso Abdramane  matricule 20057513 et Willy Foadjo Mlle    *
- * 20059876 .  Il s'agit du dévoir 2 du cours IFT 3913 Session d'Automne 2018.    *                                                                   *
- *                                                                                *
+ *  Ce programme  permet de generer un fichier csv des metrics                   *
  * ********************************************************************************/
 
 
 public class CSVFileWriter {
 
-
     SetComponent setComponent ;
     MetricContext metricContext ;
     List<String> metricsList ;
-
-    /**
-     *
-     * @param setComponent
-     */
 
     public CSVFileWriter(SetComponent setComponent) {
         this.setComponent = setComponent;
@@ -53,12 +44,7 @@ public class CSVFileWriter {
 
             makeList(setComponent.getModel().getClassPanelData().getClassListModel(),metricsList);
             HashMap<String, List<CalMetrics>> metricsHachMap= metricContext.CalCAllMetric(setComponent);
-
-
-
             FileWriter fileWriter = null;
-            //System.out.println(metricsList.size() );
-
             try {
                 fileWriter = new FileWriter(fileName);
 
@@ -107,9 +93,6 @@ public class CSVFileWriter {
 
             }
         }
-
-
-
         public  void makeList (DefaultListModel<String> dlm, List list){
             for (int i=0 ; i< dlm.getSize();i++){
                 list.add(dlm.get(i));

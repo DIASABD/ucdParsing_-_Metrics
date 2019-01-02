@@ -6,21 +6,15 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**********************************************************************************
- *  Ce programme  permet de faire le parsing d'un fichier ucd entrez en parametre.*
- * Il a été fait par Diasso Abdramane  matricule 20057513 et Willy Foadjo Mlle    *
- * 20059876 .  Il s'agit du dévoir 2 du cours IFT 3913 Session d'Automne 2018.    *                                                                   *
- *                                                                                *
+ *  Cette classe fait les tests unitaires junit de la classe DataLists            *
  * ********************************************************************************/
-
 
 public class DataListsTest {
 
 
     DataLists dataLists = new DataLists();
 
-    /**
-     *
-     */
+
     @Test
     public void getClassListModel() {
 
@@ -29,18 +23,13 @@ public class DataListsTest {
         dataLists.getClassListModel().addElement("Stade");
         dataLists.getClassListModel().addElement("Joueur");
         dataLists.getClassListModel().addElement("Participant");
-         assertEquals("Equipe",dataLists.getClassListModel().get(0));
+        assertEquals("Equipe",dataLists.getClassListModel().get(0));
         assertEquals("Entraineur",dataLists.getClassListModel().get(1));
         assertEquals("Stade",dataLists.getClassListModel().get(2));
         assertEquals("Joueur",dataLists.getClassListModel().get(3));
         assertEquals("Participant",dataLists.getClassListModel().get(4));
         assertTrue(dataLists.getClassListModel().getSize()==5);
-
     }
-
-    /**
-     *
-     */
 
     @Test
     public void setMetricsModel() {
@@ -56,12 +45,8 @@ public class DataListsTest {
         assertEquals("Joueur",dataLists.getClassListModel().get(3));
         assertEquals("Participant",dataLists.getClassListModel().get(4));
         assertFalse(dataLists.getMetricsModel().getSize()==10);
-
     }
 
-    /**
-     *
-     */
     @Test
     public void getDetailListModel() {
         assertNotEquals("Equipe",dataLists.getClassListModel().get(0));
@@ -72,12 +57,4 @@ public class DataListsTest {
         assertEquals(8,dataLists.getDetailListModel().getSize());
     }
 
-
-    public static void main(String[] args) {
-        DataListsTest dataListsTest= new DataListsTest();
-
-        dataListsTest.getClassListModel();
-        dataListsTest.getDetailListModel();
-        dataListsTest.setMetricsModel();
-    }
 }

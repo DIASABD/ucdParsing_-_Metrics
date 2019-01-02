@@ -1,5 +1,10 @@
 package METRICS;
 
+
+/**********************************************************************
+ *  Cette classe definit une obstraction la metrique ETC   d'une classe *
+ * ********************************************************************/
+
 import DataLists.DataLists;
 import ENCAPSULATION.Classes;
 import ENCAPSULATION.MODEL;
@@ -17,8 +22,6 @@ public class ETC  implements CalMetrics{
     private String printMetric;
     private  String description;
     private String metricName;
-
-
 
     public ETC(Classes classes) {
         this.classes = classes;

@@ -20,12 +20,10 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
-/**********************************************************************************
- *  Ce programme  permet de faire le parsing d'un fichier ucd entrez en parametre.*
- * Il a été fait par Diasso Abdramane  matricule 20057513 et Willy Foadjo Mlle    *
- * 20059876 .  Il s'agit du dévoir 1 du cours IFT 3913 Session d'Automne 2018.    *                                                                   *
- *                                                                                *
- * ********************************************************************************/
+/****************************************************************************************
+ *  Cette classe construit les panels et fait le setting des panels à partir des Jlist *
+ * *************************************************************************************/
+
 
 public class SetComponent  extends MakeComponent {
 
@@ -93,16 +91,13 @@ public class SetComponent  extends MakeComponent {
                     file_loading.setFileFilter(filter);
 
                     if(file_name.length()==0){
-                        JOptionPane.showMessageDialog(null, "Desole votre fichier est vide" +""
-                                ,
+                        JOptionPane.showMessageDialog(null, "Desole votre fichier est vide" +""                                ,
                                 "Format du fichier non valide ",
                                 JOptionPane.ERROR_MESSAGE);
                         file_name = null;
 
-
                     }
                     else {
-
                         model.setFilename(file_name);
                         model.setReadFile(new ReadFile(file_name));
                         String s = file_name.getName();
@@ -122,10 +117,7 @@ public class SetComponent  extends MakeComponent {
                             // Appelle de la methodes qui mets les noms correspondants aus classes dans la liste a cet effet
                             model.getReadFile().setClassList(model.getClassPanelData().getClassListModel(), model.getFilename());
                             model.setPrincipalList();
-
-
                             revalidateComponent();
-
                             principal_panel.revalidate();
 
                         } catch (Exception exep) {
@@ -137,14 +129,8 @@ public class SetComponent  extends MakeComponent {
                 }
             }
         });
-
         initComponent();
-
-
-
     }
-
-
 
     public  void initComponent() {
 
@@ -212,8 +198,6 @@ public class SetComponent  extends MakeComponent {
     }
 
     public  void revalidateComponent(){
-
-
         // créer l'evenements lié aux classes .
         model.getClassPanelData().getClass_list().addListSelectionListener(new ListSelectionListener() {
             @Override
@@ -239,8 +223,6 @@ public class SetComponent  extends MakeComponent {
                     model.getReadFile().setList(model.getClassPanelData().getMethodListModel(), model.getFilename(), className, "CLASS", "OPERATIONS", "", "", ";");
                     model.getReadFile().setList(model.getClassPanelData().getSous_classListModel(), model.getFilename(), className, "GENERALIZATION", "SUBCLASSES", "", "", ";");
                     model.getReadFile().setList(model.getClassPanelData().getAss_ag_ListModel(), model.getFilename(), className, "RELATION", "CLASS", "", "ROLES", ";");
-
-
                     list_tem = (JList) e.getSource();
                     selectClasses = new Classes(className) {
                         @Override
@@ -250,15 +232,11 @@ public class SetComponent  extends MakeComponent {
 
                         @Override
                         public void initList(SetComponent setComponent) {
-
                         }
-
-
                     };
 
                     selectClasses.setDataLists(model.getClassPanelData());
                     metricContext.calcMetric(selectClasses);
-
                     principal_panel.revalidate();
                 }
 
@@ -286,7 +264,6 @@ public class SetComponent  extends MakeComponent {
                         list_tem = (JList) e.getSource();
                         myClasse = (String) list_tem.getSelectedValue().toString();
                         model.getReadFile().setDetails(model.getClassPanelData().getDetailListModel(), file_name, myClasse, "CLASS", ";");
-
                     } catch (Exception e1) {
                     }
                     principal_panel.revalidate();
@@ -323,29 +300,20 @@ public class SetComponent  extends MakeComponent {
 
                     } catch (Exception e1) {
                     }
-
-
                     principal_panel.revalidate();
 
                 }
 
             }
         });
-
-
     }
 
     public MODEL getModel() {
         return model;
     }
-
-
-
     public  void Essai(){
-
- Classes C = new Classes("Equipe");
-
-            System.out.println(model.getModelData().get(C).getMethodListModel().get(0));
+        Classes C = new Classes("Equipe");
+        System.out.println(model.getModelData().get(C).getMethodListModel().get(0));
     }
 }
 

@@ -1,5 +1,10 @@
 package METRICS;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction la metrique NOM  d'une classe *
+ * ********************************************************************/
+
+
 import ENCAPSULATION.Classes;
 import ENCAPSULATION.MODEL;
 import file_reading.*;
@@ -7,23 +12,16 @@ import file_reading.*;
 import javax.swing.*;
 
 public class NOM implements CalMetrics{
-
-
-
     private Classes classes;
     private String printMetric;
     private  String description;
     private String metricName;
     private  int metricValue;
 
-
     public NOM(Classes classes) {
         this.classes = classes;
         this.metricName= "NOM";;
     }
-
-
-
     public Classes getClasses() {
         return classes;
     }
@@ -50,7 +48,7 @@ public class NOM implements CalMetrics{
      méthode est héritée et redéfinie localement (même nom, même ordre et types des
      arguments et même type de retour), elle ne compte qu’une fois.
      @param model
-     * @return
+      * @return
      */
     @Override
     public double calcMetric(MODEL model) {

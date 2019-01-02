@@ -1,5 +1,10 @@
 package METRICS;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction la metrique NOA  d'une classe *
+ * ********************************************************************/
+
+
 import ENCAPSULATION.Classes;
 import ENCAPSULATION.MODEL;
 import file_reading.*;
@@ -18,9 +23,6 @@ public class NOA  implements   CalMetrics{
         this.classes = classes;
         this.metricName= "NOA";;
     }
-
-
-
     public Classes getClasses() {
         return classes;
     }

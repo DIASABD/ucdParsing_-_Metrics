@@ -1,5 +1,10 @@
 package METRICS;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction la metrique ITC   d'une classe *
+ * ********************************************************************/
+
+
 import ENCAPSULATION.Classes;
 import ENCAPSULATION.MODEL;
 import file_reading.*;
@@ -16,8 +21,6 @@ public class ITC implements   CalMetrics {
     private  String description;
     private String metricName;
     private  int metricValue;
-
-
     public ITC(Classes classes) {
         this.classes = classes;
         this.metricName= "ITC";;
@@ -34,33 +37,30 @@ public class ITC implements   CalMetrics {
 
         double result=0.0;
 
-   DefaultListModel DLM = this.getClasses().getDataLists().getMethodListModel();
+        DefaultListModel DLM = this.getClasses().getDataLists().getMethodListModel();
         DefaultListModel DLMC = this.getClasses().getDataLists().getClassListModel();
 
 
-    if(DLM.getSize()==0){
-        return  result;
-    }
-    else {
+        if(DLM.getSize()==0){
+            return  result;
+        }
+        else {
 
-        String regex = classes.toString();
-        for (int i = 0; i < DLMC.getSize(); i++) {
+            String regex = classes.toString();
+            for (int i = 0; i < DLMC.getSize(); i++) {
 
-            String mySt= DLMC.get(i).toString();
-        for (int j = 0; j < DLM.getSize(); j++) {
-            String S = DLM.get(j).toString().trim();
-            Pattern pattern = Pattern.compile(mySt);
-            Matcher matcher = pattern.matcher(S);
-                       if (matcher.find()) {
-                result++;
-
-
+                String mySt= DLMC.get(i).toString();
+                for (int j = 0; j < DLM.getSize(); j++) {
+                    String S = DLM.get(j).toString().trim();
+                    Pattern pattern = Pattern.compile(mySt);
+                    Matcher matcher = pattern.matcher(S);
+                    if (matcher.find()) {
+                        result++;
+                    }
+                }
             }
 
         }
-        }
-
-    }
         return  result;
 
 

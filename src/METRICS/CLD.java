@@ -1,5 +1,10 @@
 package METRICS;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction la metrique CLD   d'une classe *
+ * ********************************************************************/
+
+
 import DataLists.DataLists;
 import ENCAPSULATION.Classes;
 import ENCAPSULATION.MODEL;
@@ -17,13 +22,10 @@ public class CLD  implements  CalMetrics{
     private  String description;
     private String metricName;
     private  int metricValue;
-
-
     public CLD(Classes classes) {
         this.classes = classes;
         this.metricName= "CLD";;
     }
-
 
     public int getCldValue() {
         return cldValue;
@@ -74,7 +76,6 @@ public class CLD  implements  CalMetrics{
                     Matcher matcher = pattern.matcher(S);
                     if (matcher.find()) {
                         cldValue++;
-
 
                     }
 

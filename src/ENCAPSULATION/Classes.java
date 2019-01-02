@@ -1,5 +1,11 @@
 package ENCAPSULATION;
 
+
+/**********************************************************************
+ *  Cette classe definit une obstraction reprensentant une classe     *
+ * ********************************************************************/
+
+
 import javax.swing.*;
 
 import DataLists.DataLists;

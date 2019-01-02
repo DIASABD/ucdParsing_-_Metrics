@@ -1,5 +1,10 @@
 package METRICS;
 
+/**********************************************************************
+ *  Cette classe definit une obstraction la metrique DIT   d'une classe *
+ * ********************************************************************/
+
+
 import DataLists.DataLists;
 import ENCAPSULATION.Classes;
 import ENCAPSULATION.MODEL;
@@ -17,14 +22,10 @@ public class DIT  implements    CalMetrics{
     private  String description;
     private String metricName;
     private  int metricValue;
-
-
     public DIT(Classes classes) {
         this.classes = classes;
         this.metricName= "DIT";;
     }
-
-
 
     public int getDitValue() {
         return ditValue;
